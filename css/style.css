@@ -745,7 +745,7 @@ button {
   border: 1px solid var(--accent-color);
 }
 
-.modal__input:not(:focus):invalid {
+.modal__input:not(:focus):not(:placeholder-shown):invalid {
   border: 1px solid rgba(235, 16, 16, 0.781);
 }
 
