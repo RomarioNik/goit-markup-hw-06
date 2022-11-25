@@ -380,6 +380,25 @@
             </li>
           </ul>
         </div>
+
+        <form class="footer__subscribe subscribe" id="subscribe-form" autocomplete="on">
+          <label class="subscribe__label">
+            <p class="subscribe__label-text">Підпишіться на розсилку</p>
+            <input
+              class="subscribe__input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
+          </label>
+          <button class="subscribe__button btn" type="submit" form="subscribe-form">
+            Підписатися
+            <svg class="subscribe__icon-link" width="24" height="24">
+              <use href="./images/icons/icons-webstudio.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
   </body>

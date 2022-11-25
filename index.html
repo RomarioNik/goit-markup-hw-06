@@ -394,7 +394,15 @@
           <form class="modal__form" id="form-message" autocomplete="on">
             <label class="modal__label" for="input-name">Ім'я</label>
             <div class="modal__input-wrap">
-              <input class="modal__input" type="text" name="name" id="input-name" placeholder=" " />
+              <input
+                class="modal__input"
+                type="text"
+                name="name"
+                id="input-name"
+                placeholder=" "
+                minlength="3"
+                required
+              />
               <svg class="modal__svg" width="18" height="18">
                 <use href="./images/icons/icons-webstudio.svg#icon-person-modal"></use>
               </svg>
@@ -408,6 +416,8 @@
                 name="phone"
                 id="input-phone"
                 placeholder=" "
+                minlength="10"
+                pattern="[0-9]+"
                 required
               />
               <svg class="modal__svg" width="18" height="18">
@@ -439,7 +449,7 @@
             ></textarea>
 
             <label class="modal__label-checkbox">
-              <input class="modal__checkbox" type="checkbox" name="term" />
+              <input class="modal__checkbox" type="checkbox" name="term" required />
               <span class="modal__icon-checkbox"></span>
               Погоджуюся з розсилкою та приймаю
               <a class="modal__link-term" href="#">Умови договору</a>
@@ -501,7 +511,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="team__icon-link-social" width="20" height="20">
+                <svg class="team__icon-link-social footer__icon-link-social" width="20" height="20">
                   <use href="./images/icons/icons-webstudio.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -513,7 +523,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="team__icon-link-social" width="20" height="20">
+                <svg class="team__icon-link-social footer__icon-link-social" width="20" height="20">
                   <use href="./images/icons/icons-webstudio.svg#icon-twitter"></use>
                 </svg>
               </a>
@@ -525,7 +535,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="team__icon-link-social" width="20" height="20">
+                <svg class="team__icon-link-social footer__icon-link-social" width="20" height="20">
                   <use href="./images/icons/icons-webstudio.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -537,7 +547,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <svg class="team__icon-link-social" width="20" height="20">
+                <svg class="team__icon-link-social footer__icon-link-social" width="20" height="20">
                   <use href="./images/icons/icons-webstudio.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -545,24 +555,23 @@
           </ul>
         </div>
 
-        <form class="footer__subscribe subscribe" autocomplete="on">
+        <form class="footer__subscribe subscribe" id="subscribe-form" autocomplete="on">
           <label class="subscribe__label">
-            <span class="subscribe__label-text">Підпишіться на розсилку</span>
-            <span class="subscribe__wrap">
-              <input
-                class="subscribe__input"
-                type="email"
-                name="email"
-                placeholder="email@email.com"
-              />
-              <button class="subscribe__button btn" type="submit">
-                Підписатися
-                <svg class="subscribe__icon-link" width="24" height="24">
-                  <use href="./images/icons/icons-webstudio.svg#icon-send"></use>
-                </svg>
-              </button>
-            </span>
+            <p class="subscribe__label-text">Підпишіться на розсилку</p>
+            <input
+              class="subscribe__input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
           </label>
+          <button class="subscribe__button btn" type="submit" form="subscribe-form">
+            Підписатися
+            <svg class="subscribe__icon-link" width="24" height="24">
+              <use href="./images/icons/icons-webstudio.svg#icon-send"></use>
+            </svg>
+          </button>
         </form>
       </div>
     </footer>
