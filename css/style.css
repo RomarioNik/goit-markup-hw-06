@@ -507,7 +507,51 @@ button {
   margin-right: 8px;
 }
 
-.filters__button {
+.filters__label {
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.3px;
+  color: var(--header-color);
+
+  background-color: #f5f4fa;
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+  user-select: none;
+
+  transition: color 250ms var(--base-transition), background-color 250ms var(--base-transition),
+    box-shadow 250ms var(--base-transition);
+}
+
+.filters__label:hover,
+.filters__label:focus {
+  color: var(--second-color);
+
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.filters__radio {
+  position: absolute;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filters__radio:checked + .filters__label {
+  color: var(--second-color);
+  background-color: var(--accent-color);
+}
+
+/* .filters__button {
   padding: 6px 22px;
 
   font-family: inherit;
@@ -526,21 +570,21 @@ button {
 
   transition: color 250ms var(--base-transition), background-color 250ms var(--base-transition),
     box-shadow 250ms var(--base-transition);
-}
+} */
 
-.filters__button:hover,
+/* .filters__button:hover,
 .filters__button:focus {
   color: var(--second-color);
 
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+} */
 
-.filters__button--active {
+/* .filters__button--active {
   color: var(--second-color);
   background-color: var(--accent-color);
-}
+} */
 
 /* product */
 
@@ -816,12 +860,18 @@ button {
   height: 15px;
   margin-right: 8px;
 
+  color: transparent;
+
   outline: transparent;
   border: 2px solid #212121;
   border-radius: 2px;
 }
 
-.modal__checkbox:checked + .modal__icon-checkbox {
+.modal__svg-check {
+  fill: currentColor;
+}
+
+/* .modal__checkbox:checked + .modal__icon-checkbox {
   border-color: var(--accent-color);
   background-color: var(--accent-color);
   background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="none"%3E%3Crect width="16" height="15" fill="%232196F3" rx="2"/%3E%3Cmask id="a" width="13" height="10" x="2" y="3" fill="%23000" maskUnits="userSpaceOnUse"%3E%3Cpath fill="%23fff" d="M2 3h13v10H2z"/%3E%3Cpath d="M6.496 10.312 3.888 7.824 3 8.665 6.496 12 14 4.841 13.118 4l-6.622 6.312Z"/%3E%3C/mask%3E%3Cpath fill="%23fff" d="M6.496 10.312 3.888 7.824 3 8.665 6.496 12 14 4.841 13.118 4l-6.622 6.312Z"/%3E%3Cpath stroke="%23fff" stroke-width=".4" d="M6.496 10.312 3.888 7.824 3 8.665 6.496 12 14 4.841 13.118 4l-6.622 6.312Z" mask="url(%23a)"/%3E%3C/svg%3E');
@@ -831,6 +881,12 @@ button {
 
 .modal__checkbox:focus + .modal__icon-checkbox {
   border: 2px solid var(--accent-color);
+} */
+
+.modal__checkbox:checked + .modal__icon-checkbox {
+  border: none;
+  background-color: var(--accent-color);
+  color: #ffffff;
 }
 
 .modal__link-term {
