@@ -317,8 +317,11 @@ button {
   display: flex;
 }
 
-.work__item:not(:last-child) {
+.work__item {
   width: calc((100% - 60px) / 3);
+}
+
+.work__item:not(:last-child) {
   margin-right: 30px;
 }
 
